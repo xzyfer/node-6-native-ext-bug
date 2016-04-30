@@ -1,0 +1,35 @@
+os: Visual Studio 2013
+
+configuration: testing
+
+platform:
+  - x86
+  - x64
+
+version: "{build}"
+
+build: off
+
+clone_folder: c:\projects\node_modules\node-6-native-ext-bug
+
+init:
+  - cmd: >-
+      subst s: c:\projects
+  - ps: set-location -path s:\node_modules\node-6-native-ext-bug
+
+cache:
+  - '%userprofile%\.node-gyp'
+  - '%AppData%\npm-cache'
+
+environment:
+  matrix:
+    - nodejs_version: 6
+    - nodejs_version: 5
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - node --version
+  - npm --version
+  - npm install --msvs_version=2013
+
+test_script: npm test

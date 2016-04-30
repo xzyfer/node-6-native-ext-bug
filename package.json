@@ -1,0 +1,27 @@
+{
+  "name": "node-6-native-ext-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzyfer/node-6-native-ext-bug.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xzyfer/node-6-native-ext-bug/issues"
+  },
+  "homepage": "https://github.com/xzyfer/node-6-native-ext-bug#readme",
+  "dependencies": {
+    "buffertools": "^2.1.4"
+  },
+  "devDependencies": {
+    "cross-spawn-async": "^2.2.2",
+    "mocha": "^2.4.5"
+  }
+}
