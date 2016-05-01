@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha test"
+    "test": "mocha test/simple.js && mocha test/test.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "buffertools": "^2.1.4"
   },
   "devDependencies": {
-    "cross-spawn-async": "^2.2.2",
     "mocha": "^2.4.5"
   }
 }

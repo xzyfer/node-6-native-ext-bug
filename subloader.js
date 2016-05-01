@@ -1,4 +1,4 @@
-console.log('subloader.js:', '__dirname:', __dirname);
+console.log('Executing:', __filename);
 
 var path = require('path'),
     extPath = path.join(
@@ -6,5 +6,5 @@ var path = require('path'),
       'build', 'Release', 'buffertools.node'
     );
 
-console.log('subloader.js:', 'requiring:', extPath);
+console.log('Requiring:', extPath);
 require(extPath);
